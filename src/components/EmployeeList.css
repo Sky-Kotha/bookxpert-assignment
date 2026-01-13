@@ -1,0 +1,111 @@
+.employee-list-container {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.employee-list-header {
+  padding: 20px;
+  border-bottom: 2px solid #f0f0f0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.employee-list-header h2 {
+  margin: 0;
+  color: #333;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.print-button {
+  padding: 10px 20px;
+  background: #27ae60;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.print-button:hover {
+  background: #229954;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+}
+
+.employee-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.employee-table thead {
+  background: #f8f9fa;
+}
+
+.employee-table th {
+  padding: 16px;
+  text-align: left;
+  font-weight: 600;
+  color: #333;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+.employee-table td {
+  padding: 16px;
+  border-bottom: 1px solid #f0f0f0;
+  color: #666;
+}
+
+.employee-table tbody tr:hover {
+  background: #f8f9fa;
+}
+
+.empty-state {
+  background: white;
+  padding: 60px 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.empty-state p {
+  color: #999;
+  font-size: 18px;
+  margin: 0;
+}
+
+@media print {
+  .employee-list-header,
+  .print-button {
+    display: none;
+  }
+
+  .employee-table {
+    font-size: 12px;
+  }
+
+  .employee-table th,
+  .employee-table td {
+    padding: 8px;
+  }
+}
+
+@media (max-width: 768px) {
+  .table-wrapper {
+    overflow-x: scroll;
+  }
+
+  .employee-table {
+    min-width: 800px;
+  }
+}
